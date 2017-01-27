@@ -1,25 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+there are so few commits on this app because I really struggled when pushing to github / running the server and trying to make it work, being that this is my first app where I have used the rails-react gem.
 
-Things you may want to cover:
+hopefully they will look more clean cut as time goes on.   :)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # rails_react_app
