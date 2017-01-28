@@ -1,11 +1,9 @@
 @Record = React.createClass
-  getInitialState:->
-  edit:false
-
-  handleToggle: (e)->
-  e.preventDefault()
-    @setState edit:!@state.edit
-
+  getInitialState: ->
+    edit: false
+  handleToggle: (e) ->
+    e.preventDefault()
+    @setState edit: !@state.edit
   handleDelete: (e) ->
     e.preventDefault()
     $.ajax
@@ -14,7 +12,6 @@
       dataType: 'JSON'
       success: () =>
         @props.handleDeleteRecord @props.record
-
   handleEdit: (e) ->
     e.preventDefault()
     data =
@@ -30,7 +27,6 @@
       success: (data) =>
         @setState edit: false
         @props.handleEditRecord @props.record, data
-
   recordRow: ->
     React.DOM.tr null,
       React.DOM.td null, @props.record.date
@@ -61,7 +57,7 @@
           defaultValue: @props.record.title
           ref: 'title'
       React.DOM.td null,
-        React.DOM.inputs
+        React.DOM.input
           className: 'form-control'
           type: 'number'
           defaultValue: @props.record.amount
@@ -74,10 +70,9 @@
         React.DOM.a
           className: 'btn btn-danger'
           onClick: @handleToggle
-          'cancel'
-
-render: ->
-  if @state.edit
-    @recordForm()
-  else
-    @recordRow()
+          'Cancel'
+  render: ->
+    if @state.edit
+      @recordForm()
+    else
+      @recordRow()
